@@ -1,0 +1,22 @@
+EL PRITTY — GitHub Pages
+
+Subir estos archivos DIRECTAMENTE a la raíz del repositorio (no dentro de otra carpeta):
+- index.html
+- hero-main.jpg
+- trainer-about.png
+- client-demo.png
+- favicon.svg
+- .nojekyll
+
+Luego en GitHub:
+Settings > Pages > Build and deployment
+Source: Deploy from a branch
+Branch: main
+Folder: /(root)
+Save
+
+La URL del proyecto será:
+https://bautimenem.github.io/elpritty/
+
+IMPORTANTE:
+No dejar index.html dentro de EL_PRITTY_WEB_V10_2_FINAL ni dentro de /docs si Pages está configurado a /(root).
