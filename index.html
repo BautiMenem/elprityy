@@ -403,7 +403,7 @@
       width:max-content!important;
       gap:0!important;
       transform:translate3d(0,0,0);
-      animation:tickerContinuous 28s linear infinite!important;
+      animation:tickerContinuous 25s linear infinite!important;
       animation-delay:-7.5s!important;
       animation-play-state:running!important;
       will-change:transform;
@@ -432,13 +432,13 @@
       :root{--stage-offset:70px}
       #principle,#engine,#track,#method,#evidence,#about,#faq,#start{min-height:100svh!important;padding-top:var(--stage-offset)!important}
       #principle>.container,#engine>.container,#track>.container,#method>.container,#evidence>.container,#about>.container,#faq>.container,#start>.container{width:min(calc(100% - 24px),1440px)!important}
-      .ticker-track{animation-duration:32s!important;animation-delay:-8s!important}
+      .ticker-track{animation-duration:29s!important;animation-delay:-7.25s!important}
       .ticker-group{font-size:20px!important;padding-right:130px!important}
       .ticker-item{gap:42px!important;margin-right:42px!important}
     }
     @media(max-width:640px){
       :root{--stage-offset:68px}
-      .ticker-track{animation-duration:34s!important;animation-delay:-8.5s!important}
+      .ticker-track{animation-duration:31s!important;animation-delay:-7.75s!important}
       .ticker-group{font-size:18px!important;padding-right:110px!important}
       .ticker-item{gap:36px!important;margin-right:36px!important}
     }
@@ -487,11 +487,11 @@
     @keyframes mobileHeroPhotoIn{from{opacity:.12;transform:scale(1.07)}to{opacity:1;transform:scale(1)}}
 
     @media(max-width:900px){
-      #hero .profile{animation:mobileHeroCardIn 1.55s .28s var(--ease) both}
-      #hero .hero-main-visual .athlete-photo-img{transform-origin:center center;animation:mobileHeroPhotoIn 1.85s .48s var(--ease) both}
+      #hero .profile{animation:mobileHeroCardIn 2.00s .28s var(--ease) both}
+      #hero .hero-main-visual .athlete-photo-img{transform-origin:center center;animation:mobileHeroPhotoIn 2.45s .48s var(--ease) both}
 
       /* Mobile About order: title -> green phrase -> 07 -> image -> body -> principles. */
-      #about .section-inner>.about-section-label{display:none!important}
+      #about .section-inner>.about-section-label{display:block!important;margin:0 0 18px!important}
       #about .about-stage-ghost{display:none!important}
       #about .about-mobile-head{display:block;margin:0 0 14px}
       #about .about-mobile-head .display-md{margin:0 0 14px!important}
@@ -692,7 +692,7 @@
   let trackRan=false, graphBlinkTimer=null;
   const trackCounters=$$('[data-counter="track"]');
   function renderMetric(el,value){const decimals=Number(el.dataset.decimals||0),prefix=el.dataset.prefix||'',suffix=el.dataset.suffix||'';el.textContent=prefix+(decimals?value.toFixed(decimals):Math.round(value))+suffix}
-  function animateTrack(){if(trackRan)return;trackRan=true;trackWrap.classList.add('track-active');track.classList.add('track-active');const total=graphPath.getTotalLength();graphPath.style.strokeDasharray='1';graphPath.style.strokeDashoffset='1';graphPoint.style.opacity='1';graphHalo.style.opacity='.12';graphHalo.classList.remove('graph-halo-pulse');const start=performance.now();const duration=2900*durationScale;const tick=now=>{const raw=Math.min((now-start)/Math.max(duration,1),1);const p=1-Math.pow(1-raw,3);graphPath.style.strokeDashoffset=String(1-p);const pt=graphPath.getPointAtLength(total*p);graphPoint.setAttribute('cx',pt.x);graphPoint.setAttribute('cy',pt.y);graphHalo.setAttribute('cx',pt.x);graphHalo.setAttribute('cy',pt.y);trackCounters.forEach(el=>renderMetric(el,Number(el.dataset.target)*p));const week=Math.max(1,Math.min(7,Math.ceil(p*7)));updateWeekLabel(week);$$('.week-label').forEach(w=>{const n=Number(w.dataset.week);w.classList.toggle('current',n===week);w.classList.toggle('past',n<week)});if(raw<1)requestAnimationFrame(tick);else{trackCounters.forEach(el=>renderMetric(el,Number(el.dataset.target)));updateWeekLabel(7);graphPoint.style.opacity='1';graphPoint.classList.add('graph-final');graphHalo.style.opacity='';graphHalo.classList.add('graph-halo-pulse')}};requestAnimationFrame(tick)}
+  function animateTrack(){if(trackRan)return;trackRan=true;trackWrap.classList.add('track-active');track.classList.add('track-active');const total=graphPath.getTotalLength();graphPath.style.strokeDasharray='1';graphPath.style.strokeDashoffset='1';graphPoint.style.opacity='1';graphHalo.style.opacity='.12';graphHalo.classList.remove('graph-halo-pulse');const start=performance.now();const duration=4000*durationScale;const tick=now=>{const raw=Math.min((now-start)/Math.max(duration,1),1);const p=1-Math.pow(1-raw,3);graphPath.style.strokeDashoffset=String(1-p);const pt=graphPath.getPointAtLength(total*p);graphPoint.setAttribute('cx',pt.x);graphPoint.setAttribute('cy',pt.y);graphHalo.setAttribute('cx',pt.x);graphHalo.setAttribute('cy',pt.y);trackCounters.forEach(el=>renderMetric(el,Number(el.dataset.target)*p));const week=Math.max(1,Math.min(7,Math.ceil(p*7)));updateWeekLabel(week);$$('.week-label').forEach(w=>{const n=Number(w.dataset.week);w.classList.toggle('current',n===week);w.classList.toggle('past',n<week)});if(raw<1)requestAnimationFrame(tick);else{trackCounters.forEach(el=>renderMetric(el,Number(el.dataset.target)));updateWeekLabel(7);graphPoint.style.opacity='1';graphPoint.classList.add('graph-final');graphHalo.style.opacity='';graphHalo.classList.add('graph-halo-pulse')}};requestAnimationFrame(tick)}
   const trackObs=new IntersectionObserver(([e])=>{if(e.isIntersecting){animateTrack();trackObs.disconnect()}},{threshold:.18,rootMargin:'0px 0px -8% 0px'});trackObs.observe(track);
 
   if(matchMedia('(pointer:fine)').matches&&innerWidth>=768){let raf=0;addEventListener('scroll',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{$('#profileCard').style.setProperty('--parallax',Math.min(scrollY*.026,18)+'px')})},{passive:true})}
