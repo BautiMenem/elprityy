@@ -542,6 +542,21 @@
         object-position:center 31%!important;
       }
     }
+  
+    /* HERO TOP-CROP FIX 2026-10-05 */
+    /* Keep the frame size; crop the photo itself from the top. */
+    #hero .athlete.hero-main-visual .athlete-photo-img{
+      height:112%!important;
+      bottom:0!important;
+      object-position:center bottom!important;
+    }
+    @media(max-width:900px){
+      #hero .athlete.hero-main-visual .athlete-photo-img{
+        height:112%!important;
+        bottom:0!important;
+        object-position:center bottom!important;
+      }
+    }
   </style>
 </head>
 <body>
