@@ -524,6 +524,24 @@
       #track .track-metric:last-child{grid-column:1/-1;border-right:0!important}
       #evidence .case-metrics{grid-template-columns:1fr 1fr!important}
     }
+  
+    /* HERO IMAGE PRESENCE TWEAK 2026-10-05 */
+    #hero .athlete.hero-main-visual{
+      aspect-ratio:16/11.4;
+      min-height:390px;
+    }
+    #hero .athlete.hero-main-visual .athlete-photo-img{
+      object-position:center 39%;
+    }
+    @media(max-width:900px){
+      #hero .athlete.hero-main-visual{
+        aspect-ratio:4/3.2!important;
+        min-height:0!important;
+      }
+      #hero .hero-main-visual .athlete-photo-img{
+        object-position:center 22%!important;
+      }
+    }
   </style>
 </head>
 <body>
