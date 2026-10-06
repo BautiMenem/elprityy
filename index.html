@@ -893,6 +893,13 @@ I would like to know how we can get started.`;
   });
   $('#resetBtn').addEventListener('click',()=>{success.classList.remove('show');form.style.display='block';form.reset();$('[data-error]').forEach(el=>el.textContent='')});
 
+  window.__prittyWhatsAppTest=(vals,lang='es')=>{
+    const name=String(vals?.name||'').trim(),userWhatsApp=String(vals?.whatsapp||'').trim(),email=String(vals?.email||'').trim(),objective=String(vals?.objective||'').trim(),message=String(vals?.message||'').trim();
+    const waMessage=lang==='es'
+      ?`Hola Pritty 👋\n\nCompleté la evaluación desde tu página.\n\n*Nombre:* ${name}\n*Mi WhatsApp:* ${userWhatsApp}\n*Email:* ${email}\n*Objetivo:* ${objective}\n*Situación / mensaje:* ${message}\n\nQuiero saber cómo podemos empezar.`
+      :`Hi Pritty 👋\n\nI completed the assessment on your website.\n\n*Name:* ${name}\n*My WhatsApp:* ${userWhatsApp}\n*Email:* ${email}\n*Goal:* ${objective}\n*Current situation / message:* ${message}\n\nI would like to know how we can get started.`;
+    return whatsappUrl(waMessage);
+  };
   window.__coachOS={ticker:()=>getComputedStyle($('#tickerTrack')).transform,hero:()=>$$('[data-counter="hero"]').map(x=>x.textContent),track:()=>$$('[data-counter="track"]').map(x=>x.textContent),graph:()=>getComputedStyle(graphPath).strokeDashoffset,dots:()=>$$('.logic-dot').map(x=>getComputedStyle(x).opacity),lang:()=>currentLang,week:()=>currentWeek,nav:()=>header.classList.contains('scrolled')};
 })();</script>
 </body>
