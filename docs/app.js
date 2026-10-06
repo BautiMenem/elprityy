@@ -149,9 +149,9 @@
   const trackObs=new IntersectionObserver(([e])=>{if(e.isIntersecting){animateTrack();trackObs.disconnect()}},{threshold:.18,rootMargin:'0px 0px -8% 0px'});trackObs.observe(track);
 
 
-  // Evidence comparator: one subtle automatic preview, then fully manual.
+  // Evidence comparator: preview only after the user actually scrolls toward section 06.
   const compareStage=$('#caseCompare'),compareRange=compareStage?.querySelector('.compare-range');
-  let comparePreviewRaf=0,comparePreviewRan=false,compareTouched=false;
+  let comparePreviewRaf=0,comparePreviewRan=false,comparePreviewQueued=false,compareTouched=false,compareArmed=false,compareInView=false;
   const setComparePos=v=>{if(!compareStage)return;compareStage.style.setProperty('--pos',v+'%');if(compareRange)compareRange.value=String(Math.round(v))};
   const cancelComparePreview=()=>{compareTouched=true;if(comparePreviewRaf)cancelAnimationFrame(comparePreviewRaf);comparePreviewRaf=0;compareStage?.classList.remove('is-previewing')};
   if(compareStage&&compareRange){
@@ -160,6 +160,7 @@
     const animateComparePreview=()=>{
       if(comparePreviewRan||compareTouched||prefersReduced)return;
       comparePreviewRan=true;
+      comparePreviewQueued=false;
       compareStage.classList.add('is-previewing');
       setComparePos(50);
       const start=performance.now(),duration=2850;
@@ -179,10 +180,26 @@
       };
       comparePreviewRaf=requestAnimationFrame(frame);
     };
+    const maybeStartComparePreview=()=>{
+      if(!compareArmed||!compareInView||comparePreviewRan||comparePreviewQueued||compareTouched||prefersReduced)return;
+      comparePreviewQueued=true;
+      setTimeout(()=>{comparePreviewQueued=false;if(compareArmed&&compareInView&&!compareTouched)animateComparePreview()},260);
+    };
+    const initialCompareScrollY=window.scrollY;
+    const armComparePreview=()=>{
+      if(compareArmed)return;
+      if(Math.abs(window.scrollY-initialCompareScrollY)<18)return;
+      compareArmed=true;
+      maybeStartComparePreview();
+      removeEventListener('scroll',armComparePreview);
+    };
+    addEventListener('scroll',armComparePreview,{passive:true});
     const compareObs=new IntersectionObserver(([e])=>{
-      if(e.isIntersecting){setTimeout(animateComparePreview,320);compareObs.disconnect()}
-    },{threshold:.34,rootMargin:'0px 0px -10% 0px'});
-    compareObs.observe($('#evidence'));
+      compareInView=e.isIntersecting&&e.intersectionRatio>=.28;
+      maybeStartComparePreview();
+      if(comparePreviewRan)compareObs.disconnect();
+    },{threshold:[0,.28,.55],rootMargin:'0px 0px -14% 0px'});
+    compareObs.observe(compareStage);
   }
 
   if(matchMedia('(pointer:fine)').matches&&innerWidth>=768){let raf=0;addEventListener('scroll',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{$('#profileCard').style.setProperty('--parallax',Math.min(scrollY*.026,18)+'px')})},{passive:true})}
