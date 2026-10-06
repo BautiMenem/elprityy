@@ -856,7 +856,7 @@
     if(!/^\S+@\S+\.\S+$/.test(String(vals.email||'').trim()))errors.email=m.email;
     if(String(vals.objective||'').trim().length<8)errors.objective=m.objective;
     if(String(vals.message||'').trim().length<8)errors.message=m.message;
-    $('[data-error]').forEach(el=>el.textContent=errors[el.dataset.error]||'');
+    $$('[data-error]').forEach(el=>el.textContent=errors[el.dataset.error]||'');
     if(Object.keys(errors).length)return;
 
     const name=String(vals.name||'').trim();
@@ -891,7 +891,7 @@ I would like to know how we can get started.`;
 
     window.location.href=whatsappUrl(waMessage);
   });
-  $('#resetBtn').addEventListener('click',()=>{success.classList.remove('show');form.style.display='block';form.reset();$('[data-error]').forEach(el=>el.textContent='')});
+  $('#resetBtn').addEventListener('click',()=>{success.classList.remove('show');form.style.display='block';form.reset();$$('[data-error]').forEach(el=>el.textContent='')});
 
   window.__prittyWhatsAppTest=(vals,lang='es')=>{
     const name=String(vals?.name||'').trim(),userWhatsApp=String(vals?.whatsapp||'').trim(),email=String(vals?.email||'').trim(),objective=String(vals?.objective||'').trim(),message=String(vals?.message||'').trim();
