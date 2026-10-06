@@ -566,8 +566,8 @@
     .compare-card{width:min(100%,430px);margin:0 auto;background:#090b0a;border:1px solid rgba(9,11,10,.12);border-radius:22px;padding:10px;box-shadow:0 18px 46px rgba(9,11,10,.14)}
     .compare-stage{--pos:50%;position:relative;aspect-ratio:3/4;overflow:hidden;border-radius:16px;background:#0b0e0c;isolation:isolate;touch-action:pan-y}
     .compare-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;user-select:none;pointer-events:none}
-    .compare-after{object-position:center 54%}
-    .compare-before{object-position:center 55%;clip-path:inset(0 calc(100% - var(--pos)) 0 0);z-index:2}
+    .compare-after{object-position:center center}
+    .compare-before{object-position:center center;clip-path:inset(0 calc(100% - var(--pos)) 0 0);z-index:2}
     .compare-label{position:absolute;top:16px;z-index:5;padding:9px 14px;border-radius:999px;font:700 10px "IBM Plex Mono",monospace;letter-spacing:.08em;box-shadow:0 8px 20px rgba(0,0,0,.14)}
     .compare-label-before{left:16px;background:var(--bone);color:var(--ink)}
     .compare-label-after{right:16px;background:var(--lime);color:var(--ink)}
@@ -594,6 +594,20 @@
     /* CASE COMPARE SIZE FIX 2026-10-05 */
     #evidence .evidence-real>.reveal.d2{display:flex;flex-direction:column;align-items:center}
     #evidence .evidence-real>.reveal.d2>.primary{width:min(100%,430px);justify-content:center}
+  
+    /* HQ COMPARE GEOMETRY 2026-10-06 */
+    #caseCompare .compare-img{
+      display:block!important;
+      position:absolute!important;
+      inset:0!important;
+      width:100%!important;
+      height:100%!important;
+      max-width:none!important;
+      max-height:none!important;
+      object-fit:cover!important;
+      object-position:center center!important;
+      image-rendering:auto;
+    }
   </style>
 </head>
 <body>
