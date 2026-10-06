@@ -863,7 +863,7 @@
     const email=String(vals.email||'').trim();
     const objective=String(vals.objective||'').trim();
 
-    const waMessage=`¡Hola, Pritty! \uD83D\uDC4B Soy ${name}.
+    const waMessage=`¡Hola, Pritty! Soy ${name}.
 
 Me interesa saber mas acerca de tu asesoria personalizada.`;
 
@@ -879,7 +879,7 @@ Me interesa saber mas acerca de tu asesoria personalizada.`;
 
   window.__prittyWhatsAppTest=(vals)=>{
     const name=String(vals?.name||'').trim();
-    return whatsappUrl(`¡Hola, Pritty! \uD83D\uDC4B Soy ${name}.\n\nMe interesa saber mas acerca de tu asesoria personalizada.`);
+    return whatsappUrl(`¡Hola, Pritty! Soy ${name}.\n\nMe interesa saber mas acerca de tu asesoria personalizada.`);
   };
   window.__coachOS={ticker:()=>getComputedStyle($('#tickerTrack')).transform,hero:()=>$$('[data-counter="hero"]').map(x=>x.textContent),track:()=>$$('[data-counter="track"]').map(x=>x.textContent),graph:()=>getComputedStyle(graphPath).strokeDashoffset,dots:()=>$$('.logic-dot').map(x=>getComputedStyle(x).opacity),lang:()=>currentLang,week:()=>currentWeek,nav:()=>header.classList.contains('scrolled')};
 })();</script>
