@@ -198,7 +198,7 @@
     $$('[data-error]').forEach(el=>el.textContent=errors[el.dataset.error]||'');
     if(Object.keys(errors).length)return;
 
-    const name=String(vals.name||'').trim();
+    const name=String(vals.name||'').trim().replace(/[\r\n\t]+/g,' ').replace(/\s{2,}/g,' ').slice(0,80);
     const userWhatsApp=String(vals.whatsapp||'').trim();
     const email=String(vals.email||'').trim();
     const objective=String(vals.objective||'').trim();
@@ -217,9 +217,5 @@ Me interesa saber mas acerca de tu asesoria personalizada.`;
   });
   $('#resetBtn').addEventListener('click',()=>{success.classList.remove('show');form.style.display='block';form.reset();$$('[data-error]').forEach(el=>el.textContent='')});
 
-  window.__prittyWhatsAppTest=(vals)=>{
-    const name=String(vals?.name||'').trim();
-    return whatsappUrl(`¡Hola, Pritty! Soy ${name}.\n\nMe interesa saber mas acerca de tu asesoria personalizada.`);
-  };
-  window.__coachOS={ticker:()=>getComputedStyle($('#tickerTrack')).transform,hero:()=>$$('[data-counter="hero"]').map(x=>x.textContent),track:()=>$$('[data-counter="track"]').map(x=>x.textContent),graph:()=>getComputedStyle(graphPath).strokeDashoffset,dots:()=>$$('.logic-dot').map(x=>getComputedStyle(x).opacity),lang:()=>currentLang,week:()=>currentWeek,nav:()=>header.classList.contains('scrolled')};
+
 })();
