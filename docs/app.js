@@ -18,7 +18,7 @@
       'track.label':'04 / SEGUIMIENTO','track.title':'LO QUE NO SE MIDE,<br><span class="coral">SE ADIVINA.</span>','track.sub':'Seguimos datos reales para saber qué mantener, qué cambiar y cuándo hacerlo.','track.week':'SEMANA // {week}','track.checkin':'CONTROL ADAPTATIVO','track.bodyweight':'PESO CORPORAL','track.performance':'RENDIMIENTO','track.adherence':'ADHERENCIA','track.sleep':'SUEÑO','track.insight':'LECTURA DE PRITTY','track.insightTitle':'EL PESO BAJA,<br>PERO LA FUERZA <span class="lime">SUBE.</span>','track.insightBody':'Eso cambia la decisión: no recortamos más calorías esta semana.','track.next':'SIGUIENTE ACCIÓN','track.keep':'MANTENER / OBSERVAR','track.action1':'→ priorizar sueño','track.action2':'→ mantener carga en compuestos',
       'method.label':'05 / MÉTODO','method.title':'UN MÉTODO.<br>CUATRO PASOS.','method.sub':'No necesitás una semana perfecta. Necesitás un método simple que puedas repetir y ajustar.','method.eval':'EVALUAR','method.evalBody':'Tu punto de partida y tu contexto real.','method.design':'DISEÑAR','method.designBody':'Entrenamiento + hábitos que puedas sostener.','method.measure':'MEDIR','method.measureBody':'Datos, sensaciones y progreso semanal.','method.adapt':'ADAPTAR','method.adaptBody':'Cambiar lo necesario sin empezar de cero.',
       'evidence.label':'06 / EVIDENCIA','evidence.top':'TRANSFORMACIÓN REAL // PROCESO','evidence.title':'EL CAMBIO SE VE.<br>EL PROCESO <span class="coral">SE SOSTIENE.</span>','evidence.case':'CASO / TRANSFORMACIÓN REAL','evidence.goal':'Objetivo: recomposición corporal · proceso personalizado','evidence.resultLabel':'CAMBIO REAL','evidence.resultTime':'12 MESES','evidence.bodyfat':'GRASA CORPORAL','evidence.before':'ANTES','evidence.after':'DESPUÉS','evidence.drag':'DESLIZÁ PARA COMPARAR','evidence.strength':'FUERZA','evidence.adherence':'ADHERENCIA','evidence.quote':'Menos improvisación. Más consistencia, control y ajustes cuando realmente hacen falta.','evidence.disclaimer':'RESULTADOS INDIVIDUALES. PUEDEN VARIAR SEGÚN CONTEXTO, ADHERENCIA Y OTROS FACTORES.','evidence.cta':'QUIERO EMPEZAR ↗',
-      'about.label':'07 / PRITTY','about.title':'LO SIMPLE,<br>BIEN HECHO.','about.sub':'Entrenar mejor. Comer mejor. Sostenerlo.','about.body':'La idea es sacar ruido, ordenar el proceso y acompañarte con decisiones claras. Entrenamiento, alimentación y seguimiento adaptados a tu realidad.','about.p1':'SIN CASTIGO','about.p2':'PLANES PERSONALIZADOS','about.p3':'MISMO CAMINO, MISMO DESTINO','about.p4':'CONSISTENCIA PRIMERO','about.cta':'VER @ELPRITTYY_ ↗',
+      'about.label':'07 / PRITTY','about.title':'LO SIMPLE,<br>BIEN HECHO.','about.kicker':'SOBRE MÍ','about.story1':'Empecé a entrenar en 2018 y desde entonces el gimnasio cambió mi vida por completo.','about.story2':'No solo transformé mi físico. Construí disciplina, confianza, autoestima y una mentalidad que hoy me llevó a convertirme en campeón de culturismo natural.','about.story3':'Hoy quiero usar todo lo que aprendí para ayudarte a <span class="lime">conseguir resultados sin extremos, sin dietas imposibles y sin dejar de disfrutar tu vida.</span>','about.story4':'Creo en la disciplina, la constancia y en que <span class="lime">comida real = resultados reales.</span>','about.story5':'Tu mejor versión. Mi misión.','about.cta':'VER @ELPRITTYY_ ↗',
       'faq.label':'08 / PREGUNTAS','faq.title':'ANTES DE<br>EMPEZAR.','faq.sub':'Lo importante, sin letra chica.','faq.cta':'WHATSAPP DIRECTO ↗',
       'start.label':'09 / EMPEZAR','start.title':'¿EMPEZAMOS?','start.note':'NO COMPRÁS UNA RUTINA. EMPEZÁS UN PROCESO.','start.sub':'Contame dónde estás, qué querés lograr y cómo es tu semana. Desde ahí vemos la mejor forma de empezar.','start.s1':'RESPONDÉS 4 DATOS','start.s2':'RECIBÍS CONTACTO','start.s3':'DEFINIMOS EL INICIO','form.title':'PRIMER CONTACTO','form.name':'Nombre','form.whatsapp':'WhatsApp','form.email':'Email','form.objective':'Objetivo','form.mode':'Modalidad','form.online':'ONLINE','form.presential':'PRESENCIAL','form.unknown':'A DEFINIR','form.submit':'ENVIAR EVALUACIÓN ↘','form.success':'EVALUACIÓN RECIBIDA','form.next':'SIGUIENTE PASO:<br><span class="lime">CONTACTO</span>','form.successBody':'Te contactaremos para conocer tu objetivo y definir cómo empezar.','form.reset':'↻ REINICIAR DEMO','form.whatsappHint':'ABRE WHATSAPP CON EL MENSAJE LISTO PARA ENVIAR.','form.consentPrefix':'Leí y acepto la','form.consentAnd':'y los','footer.online':'© 2026 / PRITTY'
     },
@@ -30,7 +30,7 @@
       'track.label':'04 / TRACK','track.title':'WHAT ISN’T MEASURED,<br><span class="coral">IS GUESSED.</span>','track.sub':'We track real data to know what to keep, what to change and when to change it.','track.week':'WEEK // {week}','track.checkin':'ADAPTIVE CHECK-IN','track.bodyweight':'BODYWEIGHT','track.performance':'PERFORMANCE','track.adherence':'ADHERENCE','track.sleep':'SLEEP','track.insight':'PRITTY INSIGHT','track.insightTitle':'WEIGHT IS DOWN,<br>BUT STRENGTH IS <span class="lime">UP.</span>','track.insightBody':'That changes the decision: we don’t cut calories any further this week.','track.next':'NEXT ACTION','track.keep':'HOLD / OBSERVE','track.action1':'→ prioritize sleep','track.action2':'→ maintain compound loads',
       'method.label':'05 / METHOD','method.title':'ONE METHOD.<br>FOUR STEPS.','method.sub':'You do not need a perfect week. You need a simple method you can repeat and adjust.','method.eval':'ASSESS','method.evalBody':'Your starting point and real context.','method.design':'DESIGN','method.designBody':'Training + habits you can actually sustain.','method.measure':'MEASURE','method.measureBody':'Data, feedback and weekly progress.','method.adapt':'ADAPT','method.adaptBody':'Change what matters without starting over.',
       'evidence.label':'06 / EVIDENCE','evidence.top':'REAL TRANSFORMATION // PROCESS','evidence.title':'THE CHANGE SHOWS.<br>THE PROCESS <span class="coral">LASTS.</span>','evidence.case':'CASE / REAL TRANSFORMATION','evidence.goal':'Goal: body recomposition · personalized process','evidence.resultLabel':'REAL CHANGE','evidence.resultTime':'12 MONTHS','evidence.bodyfat':'BODY FAT','evidence.before':'BEFORE','evidence.after':'AFTER','evidence.drag':'SLIDE TO COMPARE','evidence.strength':'STRENGTH','evidence.adherence':'ADHERENCE','evidence.quote':'Less improvisation. More consistency, control and adjustments when they actually matter.','evidence.disclaimer':'INDIVIDUAL RESULTS. OUTCOMES MAY VARY BASED ON CONTEXT, ADHERENCE AND OTHER FACTORS.','evidence.cta':'I WANT TO START ↗',
-      'about.label':'07 / PRITTY','about.title':'SIMPLE,<br>DONE RIGHT.','about.sub':'Train better. Eat better. Sustain it.','about.body':'The idea is to remove noise, organize the process and guide you with clear decisions. Training, nutrition and follow-up adapted to real life.','about.p1':'NO PUNISHMENT','about.p2':'PERSONALIZED PLANS','about.p3':'SAME PATH, SAME DESTINATION','about.p4':'CONSISTENCY FIRST','about.cta':'SEE @ELPRITTYY_ ↗',
+      'about.label':'07 / PRITTY','about.title':'SIMPLE,<br>DONE RIGHT.','about.kicker':'ABOUT ME','about.story1':'I started training in 2018, and since then the gym has completely changed my life.','about.story2':'I did not just transform my physique. I built discipline, confidence, self-esteem and a mindset that led me to become a natural bodybuilding champion.','about.story3':'Today I want to use everything I have learned to help you <span class="lime">get results without extremes, impossible diets, or giving up enjoying your life.</span>','about.story4':'I believe in discipline, consistency, and that <span class="lime">real food = real results.</span>','about.story5':'Your best version. My mission.','about.cta':'SEE @ELPRITTYY_ ↗',
       'faq.label':'08 / FAQ','faq.title':'BEFORE<br>YOU START.','faq.sub':'The important things, without fine print.','faq.cta':'DIRECT WHATSAPP ↗',
       'start.label':'09 / START','start.title':'READY TO START?','start.note':'YOU ARE NOT BUYING A ROUTINE. YOU ARE STARTING A PROCESS.','start.sub':'Tell me where you are, what you want to achieve and what your week looks like. From there we define the best way to start.','start.s1':'ANSWER 4 DETAILS','start.s2':'GET CONTACTED','start.s3':'DEFINE THE START','form.title':'FIRST CONTACT','form.name':'Name','form.whatsapp':'WhatsApp','form.email':'Email','form.objective':'Goal','form.mode':'Mode','form.online':'ONLINE','form.presential':'IN PERSON','form.unknown':'TO DEFINE','form.submit':'SEND ASSESSMENT ↘','form.success':'ASSESSMENT RECEIVED','form.next':'NEXT STEP:<br><span class="lime">CONTACT</span>','form.successBody':'We’ll contact you to understand your goal and define how to start.','form.reset':'↻ RESET DEMO','form.whatsappHint':'OPENS WHATSAPP WITH THE MESSAGE READY TO SEND.','form.consentPrefix':'I have read and accept the','form.consentAnd':'and the','footer.online':'© 2026 / PRITTY'
     }
@@ -61,7 +61,7 @@
     es:{name:'Ingresá tu nombre.',whatsapp:'Ingresá un WhatsApp válido.',email:'Ingresá un email válido.',objective:'Contanos un poco más sobre tu objetivo.',privacy:'Debés aceptar la Política de Privacidad y los Términos.'},
     en:{name:'Enter your name.',whatsapp:'Enter a valid WhatsApp number.',email:'Enter a valid email.',objective:'Tell us a bit more about your goal.',privacy:'You must accept the Privacy Policy and Terms.'}
   };
-  const htmlKeys=new Set(['principle.title','principle.statement1','principle.statement2','engine.title','track.title','track.insightTitle','method.title','evidence.title','about.title','faq.title','start.title','form.next']);
+  const htmlKeys=new Set(['principle.title','principle.statement1','principle.statement2','engine.title','track.title','track.insightTitle','method.title','evidence.title','about.title','about.story3','about.story4','faq.title','start.title','form.next']);
   let currentLang='es';
   let currentWeek=7;
 
@@ -149,20 +149,18 @@
   const trackObs=new IntersectionObserver(([e])=>{if(e.isIntersecting){animateTrack();trackObs.disconnect()}},{threshold:.18,rootMargin:'0px 0px -8% 0px'});trackObs.observe(track);
 
 
-  // Evidence comparator: preview only after the user actually scrolls toward section 06.
-  const compareStage=$('#caseCompare'),compareRange=compareStage?.querySelector('.compare-range');
-  let comparePreviewRaf=0,comparePreviewRan=false,comparePreviewQueued=false,compareTouched=false,compareArmed=false,compareInView=false;
-  const setComparePos=v=>{if(!compareStage)return;compareStage.style.setProperty('--pos',v+'%');if(compareRange)compareRange.value=String(Math.round(v))};
-  const cancelComparePreview=()=>{compareTouched=true;if(comparePreviewRaf)cancelAnimationFrame(comparePreviewRaf);comparePreviewRaf=0;compareStage?.classList.remove('is-previewing')};
-  if(compareStage&&compareRange){
+  // Before/after comparators: preview only after the user scrolls and each card enters view.
+  function initComparePreview(compareStage){
+    const compareRange=compareStage?.querySelector('.compare-range');
+    if(!compareStage||!compareRange)return;
+    let comparePreviewRaf=0,comparePreviewRan=false,comparePreviewQueued=false,compareTouched=false,compareArmed=false,compareInView=false;
+    const setComparePos=v=>{compareStage.style.setProperty('--pos',v+'%');compareRange.value=String(Math.round(v))};
+    const cancelComparePreview=()=>{compareTouched=true;if(comparePreviewRaf)cancelAnimationFrame(comparePreviewRaf);comparePreviewRaf=0;compareStage.classList.remove('is-previewing')};
     compareRange.addEventListener('input',()=>setComparePos(Number(compareRange.value)));
     ['pointerdown','mousedown','touchstart','input','change'].forEach(type=>compareRange.addEventListener(type,cancelComparePreview,{passive:type!=='input'&&type!=='change'}));
     const animateComparePreview=()=>{
       if(comparePreviewRan||compareTouched||prefersReduced)return;
-      comparePreviewRan=true;
-      comparePreviewQueued=false;
-      compareStage.classList.add('is-previewing');
-      setComparePos(50);
+      comparePreviewRan=true;comparePreviewQueued=false;compareStage.classList.add('is-previewing');setComparePos(50);
       const start=performance.now(),duration=2850;
       const ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
       const lerp=(a,b,t)=>a+(b-a)*t;
@@ -185,13 +183,11 @@
       comparePreviewQueued=true;
       setTimeout(()=>{comparePreviewQueued=false;if(compareArmed&&compareInView&&!compareTouched)animateComparePreview()},260);
     };
-    const initialCompareScrollY=window.scrollY;
+    const initialScrollY=window.scrollY;
     const armComparePreview=()=>{
       if(compareArmed)return;
-      if(Math.abs(window.scrollY-initialCompareScrollY)<18)return;
-      compareArmed=true;
-      maybeStartComparePreview();
-      removeEventListener('scroll',armComparePreview);
+      if(Math.abs(window.scrollY-initialScrollY)<18)return;
+      compareArmed=true;maybeStartComparePreview();removeEventListener('scroll',armComparePreview);
     };
     addEventListener('scroll',armComparePreview,{passive:true});
     const compareObs=new IntersectionObserver(([e])=>{
@@ -201,6 +197,7 @@
     },{threshold:[0,.28,.55],rootMargin:'0px 0px -14% 0px'});
     compareObs.observe(compareStage);
   }
+  ['caseCompare','aboutCompare'].forEach(id=>{const stage=$('#'+id);if(stage)initComparePreview(stage)});
 
   if(matchMedia('(pointer:fine)').matches&&innerWidth>=768){let raf=0;addEventListener('scroll',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{$('#profileCard').style.setProperty('--parallax',Math.min(scrollY*.026,18)+'px')})},{passive:true})}
 
