@@ -79,7 +79,7 @@
     $$('[data-i18n]').forEach(el=>{const key=el.dataset.i18n,val=translations[currentLang][key];if(val==null)return;if(htmlKeys.has(key))el.innerHTML=val;else el.textContent=val});
     $$('.lang-btn').forEach(b=>{const active=b.dataset.lang===currentLang;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});
     try{localStorage.setItem('coachOSLang',currentLang)}catch{}
-    document.title=currentLang==='es'?'PRITTY — Preparación Personal':'PRITTY — Personal Coaching';
+    document.title=currentLang==='es'?'PRITTY // Alimentación & Entrenamiento Personalizado':'PRITTY // Personalized Nutrition & Training';
     const meta=document.querySelector('meta[name="description"]'); if(meta)meta.content=currentLang==='es'?'Entrenamiento, hábitos y seguimiento sin vueltas, adaptados a tu vida real.':'Training, habits and follow-up adapted to real life.';
     const directWa=whatsappUrl(directWhatsAppMessage());
     const faqWa=$('#faqWhatsApp'),footerWa=$('#footerWhatsApp');
